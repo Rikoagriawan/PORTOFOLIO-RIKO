@@ -400,7 +400,7 @@ section {
     color: var(--text);
     padding: 0.6rem 1rem;
     border-radius: 999px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     border: 2px solid var(--primary);
 }
 
