@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIKO AGRIAWAN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo"> <img src="image/logo Riko.png" class="logoR" alt="Logo">Portofolio<span>.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">☀</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">Frontend Developer | Marketing Specialist</p>
+                <h1>Hi, I'm <span>Riko</span><br>Creative Web Designer</h1>
+                <p class="hero-text">I create elegant and responsive websites that combine design, performance, and user experience.</p>
+                <div class="hero-actions">
+                    <a href="file/Riko Agriawan - CV.pdf" class="btn btn-primary" target="_blank">Download CV <i class="fa-regular fa-file"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <h3>3+</h3>
+                        <p>Years of Experience</p>
+                        <p>in Retail service & sales</p>
+                    </div>
+                    <div>
+                        <h3>1</h3>
+                        <p>Projects Done</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-card">
+                    <div class="profile-avatar"><img src="image/profile.png" alt="Profile Image"></div>
+                    <div class="badge">Available for work</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="section-title">
+                <p>About Me</p>
+                <h2>Who I Am</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>Passionate Developer</h3>
+                    <p>I’m a Bachelor's degree graduate in Informatics Engineering with experience in service and sales.</p> 
+                    <p>But right now, I am focusing on deepening my knowledge of web development.</p>
+                </div>
+                <div class="about-info">
+                    <div>
+                        <span>Name</span>
+                        <p>Riko Agriawan</p>
+                    </div>
+                    <div>
+                        <span>Email</span>
+                        <p>Rikoagriawan12@gmail.com</p>
+                    </div>
+                    <div>
+                        <span>Location</span>
+                        <p>Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <div class="section-title">
+                <p>Skills</p>
+                <h2>What I Do</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML & CSS</h3>
+                    <p>Responsive layouts and polished UI details.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Interactive and dynamic web experiences.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>UI/UX Design</h3>
+                    <p>Simple, elegant, and user-centered design.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Optimization</h3>
+                    <p>Fast loading pages with clean code structure.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="section-title">
+                <p>Projects</p>
+                <h2>Featured Work</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-image project-three"><img src="image/project1.png" alt="Project 1"></div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Elegant personal brand presentation with a refined look.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="section-title">
+                <p>Contact</p>
+                <h2>Let’s Work Together</h2>
+            </div>
+            <div class="contact-box">
+                <div>
+                    <h3>Get in touch</h3>
+                    <p>Interested in collaboration? Send me a message and I’ll reply soon.</p>
+                </div>
+                <form id="contactForm" novalidate>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                    <p class="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Riko. All rights reserved.</p>
+        <a href="#" class="social-link"><i class="fa-brands fa-square-linkedin"></i></a>
+        <a href="#" class="social-link"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fa-brands fa-square-whatsapp"></i></a>
+    </footer>
+    <button id="keatas" class="up-toggle"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>
