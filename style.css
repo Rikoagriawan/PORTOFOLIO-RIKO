@@ -661,6 +661,7 @@ footer {
     }
     
     .up-toggle {
-        display: flex;
+        float: left;
+        margin-left: 20rem;
     }
 }
