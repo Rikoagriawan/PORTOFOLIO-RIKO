@@ -30,6 +30,31 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+/*Kategori Skill*/
+const btnkat = document.getElementById('toggleBtn');
+const btnkat2 = document.getElementById('toggleBtn2');
+const box = document.getElementById('contentBox');
+const box2 = document.getElementById('contentBox2');
+
+btnkat.addEventListener("click", function () {
+            // Toggle tampil/sembunyi
+            if (box.style.display === "block") {
+                box.style.display = "none";
+            } else {
+                box.style.display = "block";
+            }
+        });
+
+btnkat2.addEventListener("click", function () {
+            // Toggle tampil/sembunyi
+            if (box2.style.display === "block") {
+                box2.style.display = "none";
+            } else {
+                box2.style.display = "block";
+            }
+        });
+
+/* Kirim Email */
 if (contactForm && formStatus) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
