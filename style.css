@@ -167,6 +167,46 @@ body.dark .navbar {
     transform: translateY(-6px) rotate(-45deg);
 }
 
+#contentBox {
+    display: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+#contentBox2 {
+    display: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+
+.btn-skill {
+    padding: 0.95rem 1rem;
+    margin-bottom: 0.7rem;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
 .theme-toggle {
     width: 46px;
     height: 46px;
