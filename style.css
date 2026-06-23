@@ -469,8 +469,7 @@ section {
 .about-card,
 .about-info,
 .skill-card,
-.project-card,
-.contact-box {
+.project-card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -490,7 +489,6 @@ section {
 .about-info span,
 .skill-card p,
 .project-card p,
-.contact-box p,
 footer p {
     color: var(--muted);
 }
@@ -633,6 +631,33 @@ button[type="submit"] {
 footer {
     text-align: center;
     padding: 2rem 0 3rem;
+}
+
+.bigicon {
+    font-size: 30px;
+}
+
+.social-links {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-links a{
+    color: var(--text);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-2);
+    transform: translateY(-3px);
 }
 
 .up-toggle {
