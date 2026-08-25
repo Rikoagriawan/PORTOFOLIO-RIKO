@@ -15,12 +15,13 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="#home" class="logo"> <img src="image/LogoRiko.png" class="logoR" alt="Logo">Portofolio<span>.</span></a>
+            <a href="#home" class="logo"> <img src="image/logo Riko.png" class="logoR" alt="Logo">Portofolio<span>.</span></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-actions">
@@ -43,7 +44,7 @@
                 <h1>Hi, I'm <span>Riko</span><br>Creative Web Designer</h1>
                 <p class="hero-text">I create elegant and responsive websites that combine design, performance, and user experience.</p>
                 <div class="hero-actions">
-                    <a href="file/cvRiko.pdf" class="btn btn-primary" target="_blank">Download CV <i class="fa-regular fa-file"></i></a>
+                    <a href="file/Riko Agriawan - CV.pdf" class="btn btn-primary" target="_blank">Download CV <i class="fa-regular fa-file"></i></a>
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
                 <div class="hero-stats">
@@ -99,8 +100,9 @@
                 <p>Skills</p>
                 <h2>What I Do</h2>
             </div>
-            <button id="toggleBtn" class="btn-skill">Skills Pemrograman
-                <span class="arrow">></span>
+            <button id="toggleBtn" class="btn-skill" type="button" aria-expanded="false" aria-controls="contentBox">
+                <span><i class="fa-solid fa-code"></i> Skills Pemrograman</span>
+                <i class="fa-solid fa-chevron-down category-arrow"></i>
             </button><br>
             
             <div class="skills-grid" id="contentBox">
@@ -121,13 +123,14 @@
                     <p>Fast loading pages with clean code structure.</p>
                 </div>
             </div>
-            <button id="toggleBtn2" class="btn-skill">Skills Marketing 
-                <span class="arrow">></span>
+            <button id="toggleBtn2" class="btn-skill" type="button" aria-expanded="false" aria-controls="contentBox2">
+                <span><i class="fa-solid fa-bullhorn"></i> Skills Marketing</span>
+                <i class="fa-solid fa-chevron-down category-arrow"></i>
             </button>
             <div class="skill-grid" id="contentBox2">
                 <div class="skill-card">
                     <h3>Promotion</h3>
-                    <p>Advertising and Promotional Strategies.</p>
+                    <p>Advertising and promotional strategies.</p>
                 </div>
                 <div class="skill-card">
                     <h3>Action Planning</h3>
@@ -137,7 +140,7 @@
                     <h3>Customer Service</h3>
                     <p>Customer Satisfaction.</p>
                 </div>
-            </div>      
+            </div>
         </section>
 
         <section class="projects" id="projects">
@@ -153,6 +156,77 @@
                         <p>Elegant personal brand presentation with a refined look.</p>
                     </div>
                 </article>
+            </div>
+        </section>
+
+        <section class="achievements" id="achievements">
+            <div class="section-title">
+                <p>Achievements</p>
+                <h2>Milestones & Highlights</h2>
+            </div>
+            <div class="achievement-categories">
+                <div class="achievement-category">
+                    <button class="achievement-category-toggle" type="button" aria-expanded="false" aria-controls="frontendAchievements">
+                        <span><i class="fa-solid fa-code"></i> Frontend Developer</span>
+                        <i class="fa-solid fa-chevron-down category-arrow"></i>
+                    </button>
+                    <div class="achievement-details" id="frontendAchievements" hidden>
+                        <div class="achievement-list">
+                            <article class="achievement-card">
+                                <div class="achievement-icon"><i class="fa-solid fa-medal"></i></div>
+                                <h3>Portfolio Website Launch</h3>
+                                <p>Membangun portfolio pribadi dengan desain modern, responsif, dan pengalaman pengguna yang nyaman.</p>
+                            </article>
+                            <article class="list-picture">
+                                <div class="achievement-carousel" data-carousel>
+                                    <div class="carousel-track">
+                                        <div class="carousel-slide">
+                                            <img src="image/lightmode.png" alt="Light mode portfolio preview">
+                                            <span>Light Mode</span>
+                                        </div>
+                                        <div class="carousel-slide">
+                                            <img src="image/darkmode.png" alt="Dark mode portfolio preview">
+                                            <span>Dark Mode</span>
+                                        </div>
+                                        <div class="carousel-slide">
+                                            <img src="image/hpmode.png" alt="Mobile mode portfolio preview">
+                                            <span>Mobile Mode</span>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-button carousel-prev" type="button" aria-label="Previous portfolio image">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </button>
+                                    <button class="carousel-button carousel-next" type="button" aria-label="Next portfolio image">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                    <div class="carousel-dots" aria-label="Portfolio image navigation"></div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-category">
+                    <button class="achievement-category-toggle" type="button" aria-expanded="false" aria-controls="marketingAchievements">
+                        <span><i class="fa-solid fa-bullhorn"></i> Marketing</span>
+                        <i class="fa-solid fa-chevron-down category-arrow"></i>
+                    </button>
+                    <div class="achievement-details" id="marketingAchievements" hidden>
+                        <div class="achievement-list">
+                            <article class="achievement-card">
+                                <div class="achievement-image"><img src="image/BestCS.jpeg" alt="Marketing promotion project"></div>
+                                <div class="achievement-icon"><i class="fa-solid fa-handshake"></i></div>
+                                <h3>BEST CUSTOMER SERVICE</h3>
+                                <p>Memahami kebutuhan pelanggan dan memberikan layanan yang melebihi ekspektasi tanpa mengesampingkan task lain.</p>
+                            </article>
+                            <article class="achievement-card">
+                                <div class="achievement-image"><img src="image/BestBR.jpeg" alt="Marketing action planning project"></div>
+                                <div class="achievement-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <h3>BEST CONDITIONING INVENTORY STOCKROOM</h3>
+                                <p>Mengelola kondisi inventaris di stockroom untuk memastikan ketersediaan dan kualitas barang yang optimal. Sehingga mendukung operasional yang efisien dan meningkatkan sales</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
