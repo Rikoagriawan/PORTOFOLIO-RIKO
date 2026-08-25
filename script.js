@@ -40,8 +40,10 @@ btnkat.addEventListener("click", function () {
             // Toggle tampil/sembunyi
             if (box.style.display === "block") {
                 box.style.display = "none";
+                btnkat.setAttribute('aria-expanded', 'false');
             } else {
                 box.style.display = "block";
+                btnkat.setAttribute('aria-expanded', 'true');
             }
         });
 
@@ -49,10 +51,68 @@ btnkat2.addEventListener("click", function () {
             // Toggle tampil/sembunyi
             if (box2.style.display === "block") {
                 box2.style.display = "none";
+                btnkat2.setAttribute('aria-expanded', 'false');
             } else {
                 box2.style.display = "block";
+                btnkat2.setAttribute('aria-expanded', 'true');
             }
         });
+
+/*Kategori Achievement*/
+document.querySelectorAll('.achievement-category-toggle').forEach((categoryButton) => {
+    categoryButton.addEventListener('click', () => {
+        const details = document.getElementById(categoryButton.getAttribute('aria-controls'));
+        const isOpen = categoryButton.getAttribute('aria-expanded') === 'true';
+
+        document.querySelectorAll('.achievement-category-toggle').forEach((button) => {
+            button.setAttribute('aria-expanded', 'false');
+            document.getElementById(button.getAttribute('aria-controls')).hidden = true;
+        });
+
+        if (!isOpen) {
+            categoryButton.setAttribute('aria-expanded', 'true');
+            details.hidden = false;
+        }
+    });
+});
+
+/*Carousel Portfolio*/
+document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelector('.carousel-dots');
+    let currentSlide = 0;
+    let touchStartX = 0;
+
+    slides.forEach((slide, index) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot';
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Show portfolio image ${index + 1}`);
+        dot.addEventListener('click', () => showSlide(index));
+        dots.appendChild(dot);
+    });
+
+    const showSlide = (slideIndex) => {
+        currentSlide = (slideIndex + slides.length) % slides.length;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    };
+
+    carousel.querySelector('.carousel-prev').addEventListener('click', () => showSlide(currentSlide - 1));
+    carousel.querySelector('.carousel-next').addEventListener('click', () => showSlide(currentSlide + 1));
+    carousel.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].screenX;
+    }, { passive: true });
+    carousel.addEventListener('touchend', (event) => {
+        const distance = event.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(distance) > 40) showSlide(currentSlide + (distance < 0 ? 1 : -1));
+    }, { passive: true });
+
+    showSlide(0);
+});
 
 /* Kirim Email */
 if (contactForm && formStatus) {
